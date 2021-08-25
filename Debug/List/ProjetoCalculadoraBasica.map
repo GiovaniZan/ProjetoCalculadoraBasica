@@ -1,0 +1,282 @@
+###############################################################################
+#
+# IAR ELF Linker V9.10.2.313/W64 for ARM                  24/Aug/2021  21:48:15
+# Copyright 2007-2021 IAR Systems AB.
+#
+#    Output file  =
+#        D:\utfpr_microprocessadores\ProjetoCalculadoraBasica\Debug\Exe\ProjetoCalculadoraBasica.out
+#    Map file     =
+#        D:\utfpr_microprocessadores\ProjetoCalculadoraBasica\Debug\List\ProjetoCalculadoraBasica.map
+#    Command line =
+#        -f
+#        D:\utfpr_microprocessadores\ProjetoCalculadoraBasica\Debug\Exe\ProjetoCalculadoraBasica.out.rsp
+#        (D:\utfpr_microprocessadores\ProjetoCalculadoraBasica\Debug\Obj\cstartup_M.o
+#        D:\utfpr_microprocessadores\ProjetoCalculadoraBasica\Debug\Obj\gpio.o
+#        D:\utfpr_microprocessadores\ProjetoCalculadoraBasica\Debug\Obj\main.o
+#        D:\utfpr_microprocessadores\ProjetoCalculadoraBasica\Debug\Obj\uart.o
+#        --no_out_extension -o
+#        D:\utfpr_microprocessadores\ProjetoCalculadoraBasica\Debug\Exe\ProjetoCalculadoraBasica.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        D:\utfpr_microprocessadores\ProjetoCalculadoraBasica\Debug\List\ProjetoCalculadoraBasica.map
+#        --config "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\config\linker\TexasInstruments\TM4C129ENC.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0xf'ffff] { ro };
+define block CSTACK with size = 32K, alignment = 8 { };
+define block HEAP with size = 64K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2003'ffff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                       0x200
+  .intvec            const            0x0   0x200  cstartup_M.o [1]
+                                  - 0x200   0x200
+
+"P1":                                       0x9a0
+  .text              ro code        0x200   0x3ec  main.o [1]
+  .text              ro code        0x5ec    0xa8  gpio.o [1]
+  .text              ro code        0x694    0xd8  uart.o [1]
+  .text              ro code        0x76c    0x14  memset.o [4]
+  .text              ro code        0x780   0x274  I64DivMod.o [4]
+  .text              ro code        0x9f4    0x66  ABImemset.o [4]
+  .text              ro code        0xa5a    0x2a  copy_init3.o [4]
+  .text              ro code        0xa84     0x2  I64DivZer.o [4]
+  .text              ro code        0xa86    0x38  zero_init3.o [4]
+  .text              ro code        0xabe     0x2  cstartup_M.o [1]
+  .text              ro code        0xac0    0x28  data_init.o [4]
+  .text              ro code        0xae8    0x22  fpinit_M.o [3]
+  .iar.init_table    const          0xb0c    0x24  - Linker created -
+  .text              ro code        0xb30     0x2  cstartup_M.o [1]
+  .text              ro code        0xb34    0x1e  cmain.o [4]
+  .text              ro code        0xb52     0x4  low_level_init.o [2]
+  .text              ro code        0xb56     0x4  exit.o [2]
+  .text              ro code        0xb5a     0x2  cstartup_M.o [1]
+  .text              ro code        0xb5c     0xa  cexit.o [4]
+  .text              ro code        0xb66     0x2  cstartup_M.o [1]
+  .text              ro code        0xb68    0x14  exit.o [5]
+  .text              ro code        0xb7c    0x10  cstartup_M.o [1]
+  Initializer bytes  const          0xb8c     0x8  <for P2-1>
+  .text              ro code        0xb94     0x2  cstartup_M.o [1]
+  .text              ro code        0xb96     0x2  cstartup_M.o [1]
+  .text              ro code        0xb98     0x2  cstartup_M.o [1]
+  .text              ro code        0xb9a     0x2  cstartup_M.o [1]
+  .text              ro code        0xb9c     0x2  cstartup_M.o [1]
+  .text              ro code        0xb9e     0x2  cstartup_M.o [1]
+  .rodata            const          0xba0     0x0  zero_init3.o [4]
+  .rodata            const          0xba0     0x0  copy_init3.o [4]
+                                  - 0xba0   0x9a0
+
+"P2", part 1 of 3:                            0x8
+  P2-1                        0x2000'0000     0x8  <Init block>
+    .data            inited   0x2000'0000     0x8  main.o [1]
+                            - 0x2000'0008     0x8
+
+"P2", part 2 of 3:                           0x5c
+  .bss               zero     0x2000'0008    0x20  main.o [1]
+  .bss               zero     0x2000'0028    0x20  main.o [1]
+  .bss               zero     0x2000'0048     0x8  main.o [1]
+  .bss               zero     0x2000'0050     0x4  main.o [1]
+  .bss               zero     0x2000'0054     0x4  main.o [1]
+  .bss               zero     0x2000'0058     0x4  main.o [1]
+  .bss               zero     0x2000'005c     0x1  main.o [1]
+  .bss               zero     0x2000'005d     0x1  main.o [1]
+  .bss               zero     0x2000'005e     0x1  main.o [1]
+  .bss               zero     0x2000'005f     0x1  main.o [1]
+  .bss               zero     0x2000'0060     0x1  main.o [1]
+  .bss               zero     0x2000'0061     0x1  main.o [1]
+                            - 0x2000'0062    0x5a
+
+"P2", part 3 of 3:                         0x8000
+  CSTACK                      0x2000'0068  0x8000  <Block>
+    CSTACK           uninit   0x2000'0068  0x8000  <Block tail>
+                            - 0x2000'8068  0x8000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0xba0     0xf'ffff  0xf'f460
+  0x2000'0064  0x2000'0067       0x4
+  0x2000'8068  0x2003'ffff  0x3'7f98
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x5a:
+          0x2000'0008  0x5a
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x8:
+                0xb8c   0x8
+    1 destination range, total size 0x8:
+          0x2000'0000   0x8
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+command line/config:
+    -------------------------------------------
+    Total:
+
+D:\utfpr_microprocessadores\ProjetoCalculadoraBasica\Debug\Obj: [1]
+    cstartup_M.o           36      512
+    gpio.o                168
+    main.o              1'004        8       98
+    uart.o                216
+    -------------------------------------------
+    Total:              1'424      520       98
+
+dl7M_tln.a: [2]
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                  8
+
+m7M_tls.a: [3]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
+
+rt7M_tl.a: [4]
+    ABImemset.o           102
+    I64DivMod.o           628
+    I64DivZer.o             2
+    cexit.o                10
+    cmain.o                30
+    copy_init3.o           42
+    data_init.o            40
+    memset.o               20
+    zero_init3.o           56
+    -------------------------------------------
+    Total:                930
+
+shb_l.a: [5]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    2        2
+    Linker created                  36   32'768
+-----------------------------------------------
+    Grand Total:        2'418      558   32'866
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base         0xb0c          --   Gb  - Linker created -
+.iar.init_table$$Limit        0xb30          --   Gb  - Linker created -
+?main                         0xb35         Code  Gb  cmain.o [4]
+BusFault_Handler              0xb67    0x2  Code  Gb  cstartup_M.o [1]
+CSTACK$$Base            0x2000'0068          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'8068          --   Gb  - Linker created -
+DebugMon_Handler              0xb99    0x2  Code  Gb  cstartup_M.o [1]
+ExecucaoOperacao              0x453   0x70  Code  Gb  main.o [1]
+GPIO_Init                     0x5ed   0x5e  Code  Gb  gpio.o [1]
+HardFault_Handler             0xb31    0x2  Code  Gb  cstartup_M.o [1]
+IntDefaultHandler             0xb9f    0x2  Code  Gb  cstartup_M.o [1]
+MemManage_Handler             0xb5b    0x2  Code  Gb  cstartup_M.o [1]
+NMI_Handler                   0xabf    0x2  Code  Gb  cstartup_M.o [1]
+OutputBuffRes64bitsHL         0x4c3   0xb4  Code  Gb  main.o [1]
+Parsestring                   0x3cd   0x86  Code  Gb  main.o [1]
+PendSV_Handler                0xb9b    0x2  Code  Gb  cstartup_M.o [1]
+PortJ_Input                   0x64b    0x6  Code  Gb  gpio.o [1]
+PortN_Output                  0x651    0x6  Code  Gb  gpio.o [1]
+Region$$Table$$Base           0xb0c          --   Gb  - Linker created -
+Region$$Table$$Limit          0xb30          --   Gb  - Linker created -
+SVC_Handler                   0xb97    0x2  Code  Gb  cstartup_M.o [1]
+SysTick_Handler               0xb9d    0x2  Code  Gb  cstartup_M.o [1]
+TransmiteOutpurBuff           0x58d   0x22  Code  Gb  main.o [1]
+TransmiteString               0x577   0x16  Code  Gb  main.o [1]
+Uart0_Init                    0x695   0x8a  Code  Gb  uart.o [1]
+Uart0_Send                    0x71f   0x10  Code  Gb  uart.o [1]
+UsageFault_Handler            0xb95    0x2  Code  Gb  cstartup_M.o [1]
+__aeabi_ldiv0                 0xa85         Code  Gb  I64DivZer.o [4]
+__aeabi_ldivmod               0x781         Code  Gb  I64DivMod.o [4]
+__aeabi_memset                0x9f5         Code  Gb  ABImemset.o [4]
+__aeabi_uldivmod              0x7c5         Code  Gb  I64DivMod.o [4]
+__cmain                       0xb35         Code  Gb  cmain.o [4]
+__exit                        0xb69   0x14  Code  Gb  exit.o [5]
+__iar_Memset                  0x9f5         Code  Gb  ABImemset.o [4]
+__iar_Memset_word             0x9fd         Code  Gb  ABImemset.o [4]
+__iar_copy_init3              0xa5b   0x2a  Code  Gb  copy_init3.o [4]
+__iar_data_init3              0xac1   0x28  Code  Gb  data_init.o [4]
+__iar_init_vfp                0xae9         Code  Gb  fpinit_M.o [3]
+__iar_program_start           0xb7d   0x10  Code  Gb  cstartup_M.o [1]
+__iar_zero_init3              0xa87   0x38  Code  Gb  zero_init3.o [4]
+__low_level_init              0xb53    0x4  Code  Gb  low_level_init.o [2]
+__vector_table                  0x0  0x200  Data  Gb  cstartup_M.o [1]
+_call_main                    0xb41         Code  Gb  cmain.o [4]
+_exit                         0xb5d         Code  Gb  cexit.o [4]
+acao                    0x2000'0061    0x1  Data  Gb  main.o [1]
+arg                     0x2000'0058    0x4  Data  Gb  main.o [1]
+buffer                  0x2000'0008   0x20  Data  Gb  main.o [1]
+erroflag                0x2000'005f    0x1  Data  Gb  main.o [1]
+errostring              0x2000'0000    0x8  Data  Gb  main.o [1]
+exit                          0xb57    0x4  Code  Gb  exit.o [2]
+main                          0x201  0x1cc  Code  Gb  main.o [1]
+memset                        0x76d   0x14  Code  Gb  memset.o [4]
+n                       0x2000'005c    0x1  Data  Gb  main.o [1]
+n_fim                   0x2000'005e    0x1  Data  Gb  main.o [1]
+n_op                    0x2000'005d    0x1  Data  Gb  main.o [1]
+operacao                0x2000'0060    0x1  Data  Gb  main.o [1]
+operandoA               0x2000'0050    0x4  Data  Gb  main.o [1]
+operandoB               0x2000'0054    0x4  Data  Gb  main.o [1]
+outputbuffer            0x2000'0028   0x20  Data  Gb  main.o [1]
+res                     0x2000'0048    0x8  Data  Gb  main.o [1]
+
+
+[1] = D:\utfpr_microprocessadores\ProjetoCalculadoraBasica\Debug\Obj
+[2] = dl7M_tln.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+   2'418 bytes of readonly  code memory
+     558 bytes of readonly  data memory
+  32'866 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

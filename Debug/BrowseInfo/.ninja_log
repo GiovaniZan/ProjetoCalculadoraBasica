@@ -1,0 +1,26 @@
+# ninja log v5
+1969	4784	6515552764142370	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/ProjetoCalculadoraBasica.pbd	c1336a4696070383
+47	880	6515302350000000	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/uart.xcl	7db3af607d72e7d1
+896	1515	6515302350000000	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/main.xcl	89c34b664fe2b104
+907	1863	6514837240000000	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/cstartup_M.xcl	74dd61de6a1014fc
+4	1963	6515552733538089	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/main.pbi	c2ef227f53e24d5
+121	1605	6515302360606837	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/gpio.pbi	adda43327a03e372
+3	1676	6514837240000000	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/gpio.xcl	e27d6fe694dc693a
+4794	8227	6515552795017262	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/ProjetoCalculadoraBasica.pbw	31e961059b329c38
+15	159	6515369978908591	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/uart.pbi	c3536fbdc68c5f8e
+16	129	6515472056545268	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/cstartup_M.pbi	827e7758e959dd0c
+1	241	6515554578439175	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/main.pbi	c2ef227f53e24d5
+248	469	6515554580707880	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/ProjetoCalculadoraBasica.pbd	c1336a4696070383
+483	3245	6515554606701517	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/ProjetoCalculadoraBasica.pbw	31e961059b329c38
+4	265	6515555703536647	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/main.pbi	c2ef227f53e24d5
+271	418	6515555705055568	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/ProjetoCalculadoraBasica.pbd	c1336a4696070383
+424	2214	6515555722042654	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/ProjetoCalculadoraBasica.pbw	31e961059b329c38
+2	177	6515556962752873	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/main.pbi	c2ef227f53e24d5
+182	436	6515556965328577	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/ProjetoCalculadoraBasica.pbd	c1336a4696070383
+1	1991	6515557059392580	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/ProjetoCalculadoraBasica.pbw	31e961059b329c38
+1	184	6515565674560471	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/main.pbi	c2ef227f53e24d5
+190	312	6515565675839752	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/ProjetoCalculadoraBasica.pbd	c1336a4696070383
+321	2125	6515565689274865	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/ProjetoCalculadoraBasica.pbw	31e961059b329c38
+1	165	6515566912189365	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/main.pbi	c2ef227f53e24d5
+171	290	6515566913456325	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/ProjetoCalculadoraBasica.pbd	c1336a4696070383
+300	2397	6515566932375715	D:/utfpr_microprocessadores/ProjetoCalculadoraBasica/Debug/BrowseInfo/ProjetoCalculadoraBasica.pbw	31e961059b329c38
