@@ -17,9 +17,6 @@ void Uart0_Init(void);
 uint8_t Uart0_Rcv(void);
 void Uart0_Send(uint8_t dado);
 
-
-
-
 uint8_t errostring[] = "Erro" ; 
 uint8_t buffer[BUFFERSIZE] = {0};
 uint8_t outputbuffer[BUFFERSIZE] = {0};
