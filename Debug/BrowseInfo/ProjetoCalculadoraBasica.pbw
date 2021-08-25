@@ -113911,13 +113911,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@364@macro@BUFFERSIZE",
+    "ID": "c:main.c@488@macro@BUFFERSIZE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "BUFFERSIZE",
     "location": {
       "column": "9",
-      "line": "9",
+      "line": "18",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "BUFFERSIZE",
@@ -113925,13 +113925,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@387@macro@DIGITOSENTRADA",
+    "ID": "c:main.c@560@macro@DIGITOSENTRADA",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "DIGITOSENTRADA",
     "location": {
       "column": "9",
-      "line": "10",
+      "line": "20",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "DIGITOSENTRADA",
@@ -113945,7 +113945,7 @@
     "display": "void GPIO_Init(void)",
     "location": {
       "column": "6",
-      "line": "13",
+      "line": "23",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "GPIO_Init",
@@ -113959,7 +113959,7 @@
     "display": "uint32_t PortJ_Input(void)",
     "location": {
       "column": "10",
-      "line": "14",
+      "line": "24",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "PortJ_Input",
@@ -113973,7 +113973,7 @@
     "display": "void PortN_Output(uint32_t)",
     "location": {
       "column": "6",
-      "line": "15",
+      "line": "25",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "PortN_Output",
@@ -113987,7 +113987,7 @@
     "display": "void Uart0_Init(void)",
     "location": {
       "column": "6",
-      "line": "16",
+      "line": "26",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "Uart0_Init",
@@ -114001,7 +114001,7 @@
     "display": "uint8_t Uart0_Rcv(void)",
     "location": {
       "column": "9",
-      "line": "17",
+      "line": "27",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "Uart0_Rcv",
@@ -114015,7 +114015,7 @@
     "display": "void Uart0_Send(uint8_t)",
     "location": {
       "column": "6",
-      "line": "18",
+      "line": "28",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "Uart0_Send",
@@ -114023,30 +114023,44 @@
     "scope": null
   },
   {
-    "ID": "c:@errostring",
+    "ID": "c:@errostr",
     "What": "Variable",
     "defdec": "Def",
-    "display": "errostring",
+    "display": "errostr",
     "location": {
-      "column": "9",
-      "line": "23",
+      "column": "15",
+      "line": "30",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
-    "name": "errostring",
+    "name": "errostr",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@buffer",
+    "ID": "c:@argAstring",
     "What": "Variable",
     "defdec": "Def",
-    "display": "buffer",
+    "display": "argAstring",
     "location": {
       "column": "9",
-      "line": "24",
+      "line": "32",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
-    "name": "buffer",
+    "name": "argAstring",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@argBstring",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "argBstring",
+    "location": {
+      "column": "9",
+      "line": "33",
+      "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
+    },
+    "name": "argBstring",
     "origin": "project_file",
     "scope": null
   },
@@ -114057,10 +114071,24 @@
     "display": "outputbuffer",
     "location": {
       "column": "9",
-      "line": "25",
+      "line": "34",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "outputbuffer",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@caractere",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "caractere",
+    "location": {
+      "column": "10",
+      "line": "35",
+      "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
+    },
+    "name": "caractere",
     "origin": "project_file",
     "scope": null
   },
@@ -114070,8 +114098,8 @@
     "defdec": "Dec",
     "display": "n",
     "location": {
-      "column": "9",
-      "line": "26",
+      "column": "10",
+      "line": "36",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "n",
@@ -114084,8 +114112,8 @@
     "defdec": "Dec",
     "display": "n_op",
     "location": {
-      "column": "9",
-      "line": "27",
+      "column": "10",
+      "line": "37",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "n_op",
@@ -114098,8 +114126,8 @@
     "defdec": "Dec",
     "display": "n_fim",
     "location": {
-      "column": "9",
-      "line": "28",
+      "column": "10",
+      "line": "38",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "n_fim",
@@ -114113,7 +114141,7 @@
     "display": "operandoA",
     "location": {
       "column": "9",
-      "line": "29",
+      "line": "39",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "operandoA",
@@ -114127,7 +114155,7 @@
     "display": "operandoB",
     "location": {
       "column": "20",
-      "line": "29",
+      "line": "39",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "operandoB",
@@ -114141,7 +114169,7 @@
     "display": "res",
     "location": {
       "column": "9",
-      "line": "30",
+      "line": "40",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "res",
@@ -114155,7 +114183,7 @@
     "display": "arg",
     "location": {
       "column": "9",
-      "line": "31",
+      "line": "41",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "arg",
@@ -114175,10 +114203,24 @@
         "display": "OK",
         "location": {
           "column": "29",
-          "line": "33",
+          "line": "43",
           "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
         },
         "name": "OK",
+        "origin": "project_file",
+        "scope": null
+      },
+      {
+        "ID": "c:@E@alertas_tipos@NovoAlgarismo",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "NovoAlgarismo",
+        "location": {
+          "column": "33",
+          "line": "43",
+          "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
+        },
+        "name": "NovoAlgarismo",
         "origin": "project_file",
         "scope": null
       },
@@ -114188,8 +114230,8 @@
         "defdec": "Def",
         "display": "DivPZero",
         "location": {
-          "column": "33",
-          "line": "33",
+          "column": "48",
+          "line": "43",
           "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
         },
         "name": "DivPZero",
@@ -114197,37 +114239,65 @@
         "scope": null
       },
       {
-        "ID": "c:@E@alertas_tipos@Arg1Max",
+        "ID": "c:@E@alertas_tipos@ArgMax",
         "What": "Enumerator",
         "defdec": "Def",
-        "display": "Arg1Max",
+        "display": "ArgMax",
         "location": {
-          "column": "43",
-          "line": "33",
+          "column": "58",
+          "line": "43",
           "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
         },
-        "name": "Arg1Max",
+        "name": "ArgMax",
         "origin": "project_file",
         "scope": null
       },
       {
-        "ID": "c:@E@alertas_tipos@Arg2Max",
+        "ID": "c:@E@alertas_tipos@NovoArgumento",
         "What": "Enumerator",
         "defdec": "Def",
-        "display": "Arg2Max",
+        "display": "NovoArgumento",
         "location": {
-          "column": "52",
-          "line": "33",
+          "column": "66",
+          "line": "43",
           "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
         },
-        "name": "Arg2Max",
+        "name": "NovoArgumento",
+        "origin": "project_file",
+        "scope": null
+      },
+      {
+        "ID": "c:@E@alertas_tipos@Executa",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "Executa",
+        "location": {
+          "column": "14",
+          "line": "44",
+          "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
+        },
+        "name": "Executa",
+        "origin": "project_file",
+        "scope": null
+      },
+      {
+        "ID": "c:@E@alertas_tipos@Reinicia",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "Reinicia",
+        "location": {
+          "column": "23",
+          "line": "44",
+          "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
+        },
+        "name": "Reinicia",
         "origin": "project_file",
         "scope": null
       }
     ],
     "location": {
       "column": "14",
-      "line": "33",
+      "line": "43",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "alertas_tipos",
@@ -114240,8 +114310,8 @@
     "defdec": "Def",
     "display": "enum alertas_tipos",
     "location": {
-      "column": "61",
-      "line": "33",
+      "column": "33",
+      "line": "44",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "alertas",
@@ -114260,8 +114330,8 @@
         "defdec": "Def",
         "display": "nulo",
         "location": {
-          "column": "15",
-          "line": "35",
+          "column": "30",
+          "line": "45",
           "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
         },
         "name": "nulo",
@@ -114274,8 +114344,8 @@
         "defdec": "Def",
         "display": "soma",
         "location": {
-          "column": "21",
-          "line": "35",
+          "column": "36",
+          "line": "45",
           "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
         },
         "name": "soma",
@@ -114288,8 +114358,8 @@
         "defdec": "Def",
         "display": "subtracao",
         "location": {
-          "column": "27",
-          "line": "35",
+          "column": "42",
+          "line": "45",
           "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
         },
         "name": "subtracao",
@@ -114302,8 +114372,8 @@
         "defdec": "Def",
         "display": "multiplicacao",
         "location": {
-          "column": "38",
-          "line": "35",
+          "column": "53",
+          "line": "45",
           "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
         },
         "name": "multiplicacao",
@@ -114316,8 +114386,8 @@
         "defdec": "Def",
         "display": "divisao",
         "location": {
-          "column": "53",
-          "line": "35",
+          "column": "68",
+          "line": "45",
           "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
         },
         "name": "divisao",
@@ -114327,7 +114397,7 @@
     ],
     "location": {
       "column": "14",
-      "line": "34",
+      "line": "45",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "operacao_tipo",
@@ -114341,7 +114411,7 @@
     "display": "enum operacao_tipo",
     "location": {
       "column": "15",
-      "line": "36",
+      "line": "46",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "operacao_enum",
@@ -114349,74 +114419,74 @@
     "scope": null
   },
   {
-    "ID": "c:@E@acao_tipo",
+    "ID": "c:@E@argumento_numero",
     "What": "Enum",
     "defdec": "Def",
-    "display": "acao_tipo",
+    "display": "argumento_numero",
     "fields": [
       {
-        "ID": "c:@E@acao_tipo@acumuladado",
+        "ID": "c:@E@argumento_numero@ArgA",
         "What": "Enumerator",
         "defdec": "Def",
-        "display": "acumuladado",
+        "display": "ArgA",
         "location": {
-          "column": "26",
-          "line": "37",
+          "column": "32",
+          "line": "48",
           "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
         },
-        "name": "acumuladado",
+        "name": "ArgA",
         "origin": "project_file",
         "scope": null
       },
       {
-        "ID": "c:@E@acao_tipo@executa",
+        "ID": "c:@E@argumento_numero@ArgB",
         "What": "Enumerator",
         "defdec": "Def",
-        "display": "executa",
+        "display": "ArgB",
         "location": {
-          "column": "39",
-          "line": "37",
+          "column": "38",
+          "line": "48",
           "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
         },
-        "name": "executa",
+        "name": "ArgB",
         "origin": "project_file",
         "scope": null
       },
       {
-        "ID": "c:@E@acao_tipo@reinicia",
+        "ID": "c:@E@argumento_numero@ArgC",
         "What": "Enumerator",
         "defdec": "Def",
-        "display": "reinicia",
+        "display": "ArgC",
         "location": {
-          "column": "48",
-          "line": "37",
+          "column": "44",
+          "line": "48",
           "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
         },
-        "name": "reinicia",
+        "name": "ArgC",
         "origin": "project_file",
         "scope": null
       }
     ],
     "location": {
       "column": "14",
-      "line": "37",
+      "line": "48",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
-    "name": "acao_tipo",
+    "name": "argumento_numero",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:main.c@T@acao_enum",
+    "ID": "c:main.c@T@argumento_num",
     "What": "Typedef",
     "defdec": "Def",
-    "display": "enum acao_tipo",
+    "display": "enum argumento_numero",
     "location": {
-      "column": "59",
-      "line": "37",
+      "column": "50",
+      "line": "48",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
-    "name": "acao_enum",
+    "name": "argumento_num",
     "origin": "project_file",
     "scope": null
   },
@@ -114427,7 +114497,7 @@
     "display": "operacao",
     "location": {
       "column": "15",
-      "line": "39",
+      "line": "51",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "operacao",
@@ -114435,44 +114505,30 @@
     "scope": null
   },
   {
-    "ID": "c:@acao",
+    "ID": "c:@flow_flag",
     "What": "Variable",
     "defdec": "Dec",
-    "display": "acao",
-    "location": {
-      "column": "11",
-      "line": "40",
-      "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
-    },
-    "name": "acao",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@flow_flags",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "flow_flags",
+    "display": "flow_flag",
     "location": {
       "column": "9",
-      "line": "41",
+      "line": "53",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
-    "name": "flow_flags",
+    "name": "flow_flag",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@Parsestring",
-    "What": "Function",
+    "ID": "c:@argumento",
+    "What": "Variable",
     "defdec": "Dec",
-    "display": "void Parsestring(uint8_t, uint8_t)",
+    "display": "argumento",
     "location": {
-      "column": "6",
-      "line": "43",
+      "column": "15",
+      "line": "54",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
-    "name": "Parsestring",
+    "name": "argumento",
     "origin": "project_file",
     "scope": null
   },
@@ -114483,7 +114539,7 @@
     "display": "int64_t ExecucaoOperacao(operacao_enum)",
     "location": {
       "column": "9",
-      "line": "44",
+      "line": "56",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "ExecucaoOperacao",
@@ -114497,7 +114553,7 @@
     "display": "void OutputBuffRes64bitsHL(int64_t)",
     "location": {
       "column": "6",
-      "line": "45",
+      "line": "57",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "OutputBuffRes64bitsHL",
@@ -114505,16 +114561,16 @@
     "scope": null
   },
   {
-    "ID": "c:@F@TransmiteOutpurBuff",
+    "ID": "c:@F@TransmiteOutputBuff",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void TransmiteOutpurBuff(void)",
+    "display": "void TransmiteOutputBuff(void)",
     "location": {
       "column": "6",
-      "line": "46",
+      "line": "58",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
-    "name": "TransmiteOutpurBuff",
+    "name": "TransmiteOutputBuff",
     "origin": "project_file",
     "scope": null
   },
@@ -114525,10 +114581,38 @@
     "display": "void TransmiteString(uint8_t *)",
     "location": {
       "column": "6",
-      "line": "47",
+      "line": "59",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "TransmiteString",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@ParseArgString",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int32_t ParseArgString(uint8_t *)",
+    "location": {
+      "column": "9",
+      "line": "60",
+      "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
+    },
+    "name": "ParseArgString",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TransmiteConstString",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void TransmiteConstString(const uint8_t *)",
+    "location": {
+      "column": "6",
+      "line": "61",
+      "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
+    },
+    "name": "TransmiteConstString",
     "origin": "project_file",
     "scope": null
   },
@@ -114539,7 +114623,7 @@
     "display": "int main(void)",
     "location": {
       "column": "5",
-      "line": "51",
+      "line": "65",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "main",
@@ -114547,13 +114631,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1440@F@main@chaves",
+    "ID": "c:main.c@1943@F@main@chaves",
     "What": "Variable",
     "defdec": "Def",
     "display": "chaves",
     "location": {
       "column": "11",
-      "line": "53",
+      "line": "67",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "chaves",
@@ -114561,30 +114645,44 @@
     "scope": null
   },
   {
-    "ID": "c:@F@Parsestring",
+    "ID": "c:@F@ParseArgString",
     "What": "Function",
     "defdec": "Def",
-    "display": "void Parsestring(uint8_t, uint8_t)",
+    "display": "int32_t ParseArgString(uint8_t *)",
     "location": {
-      "column": "6",
-      "line": "151",
+      "column": "9",
+      "line": "202",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
-    "name": "Parsestring",
+    "name": "ParseArgString",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:main.c@3976@F@Parsestring@cont",
+    "ID": "c:main.c@5438@F@ParseArgString@result",
     "What": "Variable",
     "defdec": "Def",
-    "display": "cont",
+    "display": "result",
     "location": {
-      "column": "11",
-      "line": "153",
+      "column": "12",
+      "line": "204",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
-    "name": "cont",
+    "name": "result",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@5462@F@ParseArgString@sinal",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "sinal",
+    "location": {
+      "column": "12",
+      "line": "205",
+      "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
+    },
+    "name": "sinal",
     "origin": "project_file",
     "scope": null
   },
@@ -114595,7 +114693,7 @@
     "display": "int64_t ExecucaoOperacao(operacao_enum)",
     "location": {
       "column": "9",
-      "line": "179",
+      "line": "218",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "ExecucaoOperacao",
@@ -114603,58 +114701,16 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@4521@F@ExecucaoOperacao@resultado",
+    "ID": "c:main.c@5745@F@ExecucaoOperacao@resultado",
     "What": "Variable",
     "defdec": "Def",
     "display": "resultado",
     "location": {
       "column": "11",
-      "line": "181",
+      "line": "220",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "resultado",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@OutputBuffRes64bits",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void OutputBuffRes64bits(int64_t)",
-    "location": {
-      "column": "6",
-      "line": "210",
-      "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
-    },
-    "name": "OutputBuffRes64bits",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@5064@F@OutputBuffRes64bits@cont",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "cont",
-    "location": {
-      "column": "11",
-      "line": "212",
-      "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
-    },
-    "name": "cont",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@5085@F@OutputBuffRes64bits@sub",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "sub",
-    "location": {
-      "column": "12",
-      "line": "213",
-      "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
-    },
-    "name": "sub",
     "origin": "project_file",
     "scope": null
   },
@@ -114665,7 +114721,7 @@
     "display": "void OutputBuffRes64bitsHL(int64_t)",
     "location": {
       "column": "6",
-      "line": "248",
+      "line": "251",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "OutputBuffRes64bitsHL",
@@ -114673,13 +114729,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5607@F@OutputBuffRes64bitsHL@cont",
+    "ID": "c:main.c@6304@F@OutputBuffRes64bitsHL@cont",
     "What": "Variable",
     "defdec": "Def",
     "display": "cont",
     "location": {
       "column": "11",
-      "line": "250",
+      "line": "253",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "cont",
@@ -114687,13 +114743,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5607@F@OutputBuffRes64bitsHL@n",
+    "ID": "c:main.c@6304@F@OutputBuffRes64bitsHL@n",
     "What": "Variable",
     "defdec": "Dec",
     "display": "n",
     "location": {
       "column": "21",
-      "line": "250",
+      "line": "253",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "n",
@@ -114701,13 +114757,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5607@F@OutputBuffRes64bitsHL@m",
+    "ID": "c:main.c@6304@F@OutputBuffRes64bitsHL@m",
     "What": "Variable",
     "defdec": "Dec",
     "display": "m",
     "location": {
       "column": "26",
-      "line": "250",
+      "line": "253",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "m",
@@ -114715,13 +114771,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@5638@F@OutputBuffRes64bitsHL@invstring",
+    "ID": "c:main.c@6335@F@OutputBuffRes64bitsHL@invstring",
     "What": "Variable",
     "defdec": "Def",
     "display": "invstring",
     "location": {
       "column": "11",
-      "line": "251",
+      "line": "254",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "invstring",
@@ -114735,7 +114791,7 @@
     "display": "void TransmiteString(uint8_t *)",
     "location": {
       "column": "6",
-      "line": "288",
+      "line": "285",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "TransmiteString",
@@ -114743,27 +114799,41 @@
     "scope": null
   },
   {
-    "ID": "c:@F@TransmiteOutpurBuff",
+    "ID": "c:@F@TransmiteConstString",
     "What": "Function",
     "defdec": "Def",
-    "display": "void TransmiteOutpurBuff(void)",
+    "display": "void TransmiteConstString(const uint8_t *)",
     "location": {
       "column": "6",
-      "line": "296",
+      "line": "293",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
-    "name": "TransmiteOutpurBuff",
+    "name": "TransmiteConstString",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:main.c@6461@F@TransmiteOutpurBuff@m",
+    "ID": "c:@F@TransmiteOutputBuff",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void TransmiteOutputBuff(void)",
+    "location": {
+      "column": "6",
+      "line": "301",
+      "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
+    },
+    "name": "TransmiteOutputBuff",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@7070@F@TransmiteOutputBuff@m",
     "What": "Variable",
     "defdec": "Def",
     "display": "m",
     "location": {
       "column": "11",
-      "line": "298",
+      "line": "303",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "m",
@@ -114777,7 +114847,7 @@
     "display": "int32_t div10(int32_t)",
     "location": {
       "column": "9",
-      "line": "305",
+      "line": "310",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "div10",
@@ -114785,13 +114855,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@6597@F@div10@invDivisor",
+    "ID": "c:main.c@7206@F@div10@invDivisor",
     "What": "Variable",
     "defdec": "Def",
     "display": "invDivisor",
     "location": {
       "column": "13",
-      "line": "307",
+      "line": "312",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "invDivisor",
@@ -114805,7 +114875,7 @@
     "display": "int32_t mult10(int32_t)",
     "location": {
       "column": "9",
-      "line": "311",
+      "line": "316",
       "path": "D:\\utfpr_microprocessadores\\ProjetoCalculadoraBasica\\src\\main.c"
     },
     "name": "mult10",
