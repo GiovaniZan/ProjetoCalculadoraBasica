@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.10.2.313/W64 for ARM                  25/Aug/2021  00:58:48
+# IAR ELF Linker V9.10.2.313/W64 for ARM                  25/Aug/2021  22:37:01
 # Copyright 2007-2021 IAR Systems AB.
 #
 #    Output file  =
@@ -60,39 +60,39 @@ define block HEAP with size = 64K, alignment = 8 { };
   .intvec          const            0x0   0x200  cstartup_M.o [1]
                                 - 0x200   0x200
 
-"P1":                                     0x972
-  .text            ro code        0x200   0x3fc  main.o [1]
-  .text            ro code        0x5fc    0xa8  gpio.o [1]
-  .text            ro code        0x6a4    0xd8  uart.o [1]
-  .text            ro code        0x77c    0x14  memset.o [4]
-  .text            ro code        0x790   0x274  I64DivMod.o [4]
-  .text            ro code        0xa04    0x66  ABImemset.o [4]
-  .text            ro code        0xa6a     0x2  cstartup_M.o [1]
-  .text            ro code        0xa6c     0x2  I64DivZer.o [4]
-  .text            ro code        0xa6e    0x38  zero_init3.o [4]
-  .text            ro code        0xaa6     0x2  cstartup_M.o [1]
-  .text            ro code        0xaa8    0x28  data_init.o [4]
-  .text            ro code        0xad0    0x22  fpinit_M.o [3]
-  .iar.init_table  const          0xaf4    0x10  - Linker created -
-  .text            ro code        0xb04     0x2  cstartup_M.o [1]
-  .text            ro code        0xb08    0x1e  cmain.o [4]
-  .text            ro code        0xb26     0x4  low_level_init.o [2]
-  .text            ro code        0xb2a     0x4  exit.o [2]
-  .text            ro code        0xb2e     0x2  cstartup_M.o [1]
-  .text            ro code        0xb30     0xa  cexit.o [4]
-  .text            ro code        0xb3a     0x2  cstartup_M.o [1]
-  .text            ro code        0xb3c    0x14  exit.o [5]
-  .text            ro code        0xb50    0x10  cstartup_M.o [1]
-  .rodata          const          0xb60     0x8  main.o [1]
-  .text            ro code        0xb68     0x2  cstartup_M.o [1]
-  .text            ro code        0xb6a     0x2  cstartup_M.o [1]
-  .text            ro code        0xb6c     0x2  cstartup_M.o [1]
-  .text            ro code        0xb6e     0x2  cstartup_M.o [1]
-  .text            ro code        0xb70     0x2  cstartup_M.o [1]
-  .rodata          const          0xb72     0x0  zero_init3.o [4]
-                                - 0xb72   0x972
+"P1":                                     0xac2
+  .text            ro code        0x200   0x54c  main.o [1]
+  .text            ro code        0x74c    0xa8  gpio.o [1]
+  .text            ro code        0x7f4    0xd8  uart.o [1]
+  .text            ro code        0x8cc    0x14  memset.o [4]
+  .text            ro code        0x8e0   0x274  I64DivMod.o [4]
+  .text            ro code        0xb54    0x66  ABImemset.o [4]
+  .text            ro code        0xbba     0x2  cstartup_M.o [1]
+  .text            ro code        0xbbc     0x2  I64DivZer.o [4]
+  .text            ro code        0xbbe    0x38  zero_init3.o [4]
+  .text            ro code        0xbf6     0x2  cstartup_M.o [1]
+  .text            ro code        0xbf8    0x28  data_init.o [4]
+  .text            ro code        0xc20    0x22  fpinit_M.o [3]
+  .iar.init_table  const          0xc44    0x10  - Linker created -
+  .text            ro code        0xc54     0x2  cstartup_M.o [1]
+  .text            ro code        0xc58    0x1e  cmain.o [4]
+  .text            ro code        0xc76     0x4  low_level_init.o [2]
+  .text            ro code        0xc7a     0x4  exit.o [2]
+  .text            ro code        0xc7e     0x2  cstartup_M.o [1]
+  .text            ro code        0xc80     0xa  cexit.o [4]
+  .text            ro code        0xc8a     0x2  cstartup_M.o [1]
+  .text            ro code        0xc8c    0x14  exit.o [5]
+  .text            ro code        0xca0    0x10  cstartup_M.o [1]
+  .rodata          const          0xcb0     0x8  main.o [1]
+  .text            ro code        0xcb8     0x2  cstartup_M.o [1]
+  .text            ro code        0xcba     0x2  cstartup_M.o [1]
+  .text            ro code        0xcbc     0x2  cstartup_M.o [1]
+  .text            ro code        0xcbe     0x2  cstartup_M.o [1]
+  .text            ro code        0xcc0     0x2  cstartup_M.o [1]
+  .rodata          const          0xcc2     0x0  zero_init3.o [4]
+                                - 0xcc2   0xac2
 
-"P2", part 1 of 2:                         0x54
+"P2", part 1 of 2:                         0x58
   .bss             zero     0x2000'0000    0x14  main.o [1]
   .bss             zero     0x2000'0014    0x14  main.o [1]
   .bss             zero     0x2000'0028    0x14  main.o [1]
@@ -101,10 +101,12 @@ define block HEAP with size = 64K, alignment = 8 { };
   .bss             zero     0x2000'0048     0x4  main.o [1]
   .bss             zero     0x2000'004c     0x2  main.o [1]
   .bss             zero     0x2000'004e     0x2  main.o [1]
-  .bss             zero     0x2000'0050     0x1  main.o [1]
-  .bss             zero     0x2000'0051     0x1  main.o [1]
-  .bss             zero     0x2000'0052     0x1  main.o [1]
-                          - 0x2000'0053    0x53
+  .bss             zero     0x2000'0050     0x2  main.o [1]
+  .bss             zero     0x2000'0052     0x2  main.o [1]
+  .bss             zero     0x2000'0054     0x1  main.o [1]
+  .bss             zero     0x2000'0055     0x1  main.o [1]
+  .bss             zero     0x2000'0056     0x1  main.o [1]
+                          - 0x2000'0057    0x57
 
 "P2", part 2 of 2:                       0x8000
   CSTACK                    0x2000'0058  0x8000  <Block>
@@ -115,8 +117,7 @@ Unused ranges:
 
          From           To      Size
          ----           --      ----
-        0xb72     0xf'ffff  0xf'f48e
-  0x2000'0054  0x2000'0057       0x4
+        0xcc2     0xf'ffff  0xf'f33e
   0x2000'8058  0x2003'ffff  0x3'7fa8
 
 
@@ -127,8 +128,8 @@ Unused ranges:
           Address      Size
           -------      ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0x53:
-          0x2000'0000  0x53
+    1 destination range, total size 0x57:
+          0x2000'0000  0x57
 
 
 
@@ -145,10 +146,10 @@ command line/config:
 D:\utfpr_microprocessadores\ProjetoCalculadoraBasica\Debug\Obj: [1]
     cstartup_M.o           36      512
     gpio.o                168
-    main.o              1'020        8       83
+    main.o              1'356        8       87
     uart.o                216
     -------------------------------------------
-    Total:              1'440      520       83
+    Total:              1'776      520       87
 
 dl7M_tln.a: [2]
     exit.o                  4
@@ -181,7 +182,7 @@ shb_l.a: [5]
     Gaps                    2        2
     Linker created                  16   32'768
 -----------------------------------------------
-    Grand Total:        2'392      538   32'851
+    Grand Total:        2'728      538   32'855
 
 
 *******************************************************************************
@@ -190,64 +191,66 @@ shb_l.a: [5]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base         0xaf4          --   Gb  - Linker created -
-.iar.init_table$$Limit        0xb04          --   Gb  - Linker created -
-?main                         0xb09         Code  Gb  cmain.o [4]
-BusFault_Handler              0xb2f    0x2  Code  Gb  cstartup_M.o [1]
+.iar.init_table$$Base         0xc44          --   Gb  - Linker created -
+.iar.init_table$$Limit        0xc54          --   Gb  - Linker created -
+?main                         0xc59         Code  Gb  cmain.o [4]
+BusFault_Handler              0xc7f    0x2  Code  Gb  cstartup_M.o [1]
 CSTACK$$Base            0x2000'0058          --   Gb  - Linker created -
 CSTACK$$Limit           0x2000'8058          --   Gb  - Linker created -
-DebugMon_Handler              0xb6b    0x2  Code  Gb  cstartup_M.o [1]
-ExecucaoOperacao              0x475   0x70  Code  Gb  main.o [1]
-GPIO_Init                     0x5fd   0x5e  Code  Gb  gpio.o [1]
-HardFault_Handler             0xaa7    0x2  Code  Gb  cstartup_M.o [1]
-IntDefaultHandler             0xb71    0x2  Code  Gb  cstartup_M.o [1]
-MemManage_Handler             0xb05    0x2  Code  Gb  cstartup_M.o [1]
-NMI_Handler                   0xa6b    0x2  Code  Gb  cstartup_M.o [1]
-OutputBuffRes64bitsHL         0x4e5   0xb4  Code  Gb  main.o [1]
-ParseArgString                0x44b   0x2a  Code  Gb  main.o [1]
-PendSV_Handler                0xb6d    0x2  Code  Gb  cstartup_M.o [1]
-PortJ_Input                   0x65b    0x6  Code  Gb  gpio.o [1]
-PortN_Output                  0x661    0x6  Code  Gb  gpio.o [1]
-Region$$Table$$Base           0xaf4          --   Gb  - Linker created -
-Region$$Table$$Limit          0xb04          --   Gb  - Linker created -
-SVC_Handler                   0xb69    0x2  Code  Gb  cstartup_M.o [1]
-SysTick_Handler               0xb6f    0x2  Code  Gb  cstartup_M.o [1]
-TransmiteConstString          0x5af   0x16  Code  Gb  main.o [1]
-TransmiteString               0x599   0x16  Code  Gb  main.o [1]
-Uart0_Init                    0x6a5   0x8a  Code  Gb  uart.o [1]
-Uart0_Send                    0x72f   0x10  Code  Gb  uart.o [1]
-UsageFault_Handler            0xb3b    0x2  Code  Gb  cstartup_M.o [1]
-__aeabi_ldiv0                 0xa6d         Code  Gb  I64DivZer.o [4]
-__aeabi_ldivmod               0x791         Code  Gb  I64DivMod.o [4]
-__aeabi_memset                0xa05         Code  Gb  ABImemset.o [4]
-__aeabi_uldivmod              0x7d5         Code  Gb  I64DivMod.o [4]
-__cmain                       0xb09         Code  Gb  cmain.o [4]
-__exit                        0xb3d   0x14  Code  Gb  exit.o [5]
-__iar_Memset                  0xa05         Code  Gb  ABImemset.o [4]
-__iar_Memset_word             0xa0d         Code  Gb  ABImemset.o [4]
-__iar_data_init3              0xaa9   0x28  Code  Gb  data_init.o [4]
-__iar_init_vfp                0xad1         Code  Gb  fpinit_M.o [3]
-__iar_program_start           0xb51   0x10  Code  Gb  cstartup_M.o [1]
-__iar_zero_init3              0xa6f   0x38  Code  Gb  zero_init3.o [4]
-__low_level_init              0xb27    0x4  Code  Gb  low_level_init.o [2]
+DebugMon_Handler              0xcbb    0x2  Code  Gb  cstartup_M.o [1]
+ExecucaoOperacao              0x5bb   0x70  Code  Gb  main.o [1]
+GPIO_Init                     0x74d   0x5e  Code  Gb  gpio.o [1]
+HardFault_Handler             0xbf7    0x2  Code  Gb  cstartup_M.o [1]
+IntDefaultHandler             0xcc1    0x2  Code  Gb  cstartup_M.o [1]
+MemManage_Handler             0xc55    0x2  Code  Gb  cstartup_M.o [1]
+NMI_Handler                   0xbbb    0x2  Code  Gb  cstartup_M.o [1]
+OutputBuffRes64bitsHL         0x62b   0xb4  Code  Gb  main.o [1]
+ParseArgString                0x587   0x34  Code  Gb  main.o [1]
+PendSV_Handler                0xcbd    0x2  Code  Gb  cstartup_M.o [1]
+PortJ_Input                   0x7ab    0x6  Code  Gb  gpio.o [1]
+PortN_Output                  0x7b1    0x6  Code  Gb  gpio.o [1]
+Region$$Table$$Base           0xc44          --   Gb  - Linker created -
+Region$$Table$$Limit          0xc54          --   Gb  - Linker created -
+SVC_Handler                   0xcb9    0x2  Code  Gb  cstartup_M.o [1]
+SysTick_Handler               0xcbf    0x2  Code  Gb  cstartup_M.o [1]
+TransmiteConstString          0x6f5   0x16  Code  Gb  main.o [1]
+TransmiteString               0x6df   0x16  Code  Gb  main.o [1]
+Uart0_Init                    0x7f5   0x8a  Code  Gb  uart.o [1]
+Uart0_Send                    0x87f   0x10  Code  Gb  uart.o [1]
+UsageFault_Handler            0xc8b    0x2  Code  Gb  cstartup_M.o [1]
+__aeabi_ldiv0                 0xbbd         Code  Gb  I64DivZer.o [4]
+__aeabi_ldivmod               0x8e1         Code  Gb  I64DivMod.o [4]
+__aeabi_memset                0xb55         Code  Gb  ABImemset.o [4]
+__aeabi_uldivmod              0x925         Code  Gb  I64DivMod.o [4]
+__cmain                       0xc59         Code  Gb  cmain.o [4]
+__exit                        0xc8d   0x14  Code  Gb  exit.o [5]
+__iar_Memset                  0xb55         Code  Gb  ABImemset.o [4]
+__iar_Memset_word             0xb5d         Code  Gb  ABImemset.o [4]
+__iar_data_init3              0xbf9   0x28  Code  Gb  data_init.o [4]
+__iar_init_vfp                0xc21         Code  Gb  fpinit_M.o [3]
+__iar_program_start           0xca1   0x10  Code  Gb  cstartup_M.o [1]
+__iar_zero_init3              0xbbf   0x38  Code  Gb  zero_init3.o [4]
+__low_level_init              0xc77    0x4  Code  Gb  low_level_init.o [2]
 __vector_table                  0x0  0x200  Data  Gb  cstartup_M.o [1]
-_call_main                    0xb15         Code  Gb  cmain.o [4]
-_exit                         0xb31         Code  Gb  cexit.o [4]
+_call_main                    0xc65         Code  Gb  cmain.o [4]
+_exit                         0xc81         Code  Gb  cexit.o [4]
 argAstring              0x2000'0000   0x14  Data  Gb  main.o [1]
 argBstring              0x2000'0014   0x14  Data  Gb  main.o [1]
-argumento               0x2000'0052    0x1  Data  Gb  main.o [1]
+argumento               0x2000'0056    0x1  Data  Gb  main.o [1]
 caractere               0x2000'004c    0x2  Data  Gb  main.o [1]
-errostr                       0xb60    0x8  Data  Gb  main.o [1]
-exit                          0xb2b    0x4  Code  Gb  exit.o [2]
-flow_flag               0x2000'0051    0x1  Data  Gb  main.o [1]
-main                          0x201  0x24a  Code  Gb  main.o [1]
-memset                        0x77d   0x14  Code  Gb  memset.o [4]
+errostr                       0xcb0    0x8  Data  Gb  main.o [1]
+exit                          0xc7b    0x4  Code  Gb  exit.o [2]
+flow_flag               0x2000'0055    0x1  Data  Gb  main.o [1]
+main                          0x201  0x386  Code  Gb  main.o [1]
+memset                        0x8cd   0x14  Code  Gb  memset.o [4]
 n                       0x2000'004e    0x2  Data  Gb  main.o [1]
-operacao                0x2000'0050    0x1  Data  Gb  main.o [1]
+op                      0x2000'0052    0x2  Data  Gb  main.o [1]
+operacao                0x2000'0054    0x1  Data  Gb  main.o [1]
 operandoA               0x2000'003c    0x4  Data  Gb  main.o [1]
 operandoB               0x2000'0048    0x4  Data  Gb  main.o [1]
 outputbuffer            0x2000'0028   0x14  Data  Gb  main.o [1]
 res                     0x2000'0040    0x8  Data  Gb  main.o [1]
+s                       0x2000'0050    0x2  Data  Gb  main.o [1]
 
 
 [1] = D:\utfpr_microprocessadores\ProjetoCalculadoraBasica\Debug\Obj
@@ -256,9 +259,9 @@ res                     0x2000'0040    0x8  Data  Gb  main.o [1]
 [4] = rt7M_tl.a
 [5] = shb_l.a
 
-   2'392 bytes of readonly  code memory
+   2'728 bytes of readonly  code memory
      538 bytes of readonly  data memory
-  32'851 bytes of readwrite data memory
+  32'855 bytes of readwrite data memory
 
 Errors: none
 Warnings: none
