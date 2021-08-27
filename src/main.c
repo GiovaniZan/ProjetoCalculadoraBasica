@@ -25,8 +25,8 @@
 // para suportar valores de 64 bits, com finalizador de string arrays de caracteres possuem 20 posições
 #define BUFFERSIZE 20
 
-// Seleciona valores de entrada de 4 algarismos - valor máximo é 9 para acomodar valor de 32 bits
-#define DIGITOSENTRADA ( 4 -  1)
+// Seleciona valores de entrada de 3 algarismos - valor máximo é 9 para acomodar valor de 32 bits
+#define DIGITOSENTRADA ( 3 -  1)
 
 // caractere que marca string de valor negativo 
 // #define NEG 'n'
@@ -35,13 +35,15 @@
 void GPIO_Init(void);
 uint32_t PortJ_Input(void);
 void PortN_Output(uint32_t leds);
+void PortF_Output(uint32_t valor);
+
 void Uart0_Init(void);
 uint8_t Uart0_Rcv(void);
 void Uart0_Send(uint8_t dado);
 
 
 // variáveis globais
-const uint8_t errostr[] = "Erro " ;  
+const uint8_t errostr[] = "Erro " ;  // número par de caracteres, incluindo o finalizador
 uint8_t argAstring[BUFFERSIZE] = {0}; // primeiro argumento
 uint8_t argBstring[BUFFERSIZE] = {0};  // segundo argumento
 uint8_t outputbuffer[BUFFERSIZE] = {0}; // resposta/mensagem de erro
@@ -60,11 +62,13 @@ typedef enum alertas_tipos {OK, NovoAlgarismo, DivPZero, ArgMax, NovoArgumento
 typedef enum operacao_tipo { nulo, soma, subtracao, multiplicacao, divisao}
               operacao_enum;
 typedef enum argumento_numero {ArgA, ArgB, ArgC} argumento_num;
-
+typedef enum Estado_enum {P0d0, Argumento1, Argumento2, Operacao,
+      ResultadoValido, Erro } estadoLED_num;
 
 operacao_enum operacao;
 alertas flow_flag;
 argumento_num argumento;
+estadoLED_num LedState, LedStateAnt;
 
 int64_t ExecucaoOperacao (operacao_enum op);
 void OutputBuffRes64bitsHL(int64_t res);
@@ -77,7 +81,6 @@ void TransmiteConstString(const uint8_t *string );
 
 int main(void)
 {
-  uint8_t chaves;
   GPIO_Init();
   Uart0_Init();
   n=0; // endereço inicio do buffer
@@ -86,6 +89,8 @@ int main(void)
   flow_flag = OK; // nenhum alerta
   s=0; // nenhum caracrtere de sinal
   op=0 ; 
+  LedState = P0d0;  // nada a ser feito nos leds
+  LedStateAnt = Erro; // apenas para provocar a entrada da estrutura que modifica os Leds
     while (1)
     {
        // verifica presença de algo para ler na UART
@@ -99,6 +104,7 @@ int main(void)
            operacao = soma;
            flow_flag = NovoArgumento;
            op++ ;
+           LedState = Operacao; // sinaliza uma operação
            break;
          case '-':
            op++;
@@ -109,6 +115,7 @@ int main(void)
            } else {
              operacao = subtracao;
              flow_flag = NovoArgumento;
+             LedState = Operacao;
            }
            if (n == 1) op++; // pega - consecutivos
          
@@ -117,11 +124,13 @@ int main(void)
            operacao = multiplicacao;
            flow_flag = NovoArgumento;
            op++ ;
+           LedState = Operacao;
            break;
          case '/':
            operacao = divisao;
            flow_flag = NovoArgumento;
            op++ ;
+           LedState = Operacao;
            break;
          case '=':
            flow_flag = Executa;
@@ -144,11 +153,15 @@ int main(void)
 
          default :
            flow_flag = Reinicia;
+           LedState = P0d0; 
            break;
          }
          
-      if ( (op > 1) || (s>1) ) flow_flag = Reinicia; // aborta se segundo operador
-
+      if ( (op > 1) || (s>1) ) 
+      {
+        flow_flag = Reinicia; // aborta se segundo operador
+        LedState = P0d0; 
+      }
       } // if uart
          
       
@@ -162,10 +175,12 @@ int main(void)
           case ArgA:
             argAstring[n] = caractere;
             argAstring[n+1] = 0;
+            LedState = Argumento1;
             break;
           case ArgB:
             argBstring[n] = caractere;
             argBstring[n+1] = 0;
+            LedState = Argumento2;
             break;
           default:
             break;
@@ -199,6 +214,7 @@ int main(void)
           argumento = ArgA;
           s=0;
           op=0 ; 
+//           LedState =P0d0; // sinaliza reinicio - algo errado
           break;
           
       case Executa:
@@ -212,9 +228,10 @@ int main(void)
           OutputBuffRes64bitsHL(res);
           if(flow_flag != DivPZero){
             TransmiteString(outputbuffer);
+             LedState = ResultadoValido; 
           } else {
             TransmiteConstString(errostr);
-            
+            LedState = Erro;            
           }
           flow_flag = Reinicia; 
           break;
@@ -222,25 +239,59 @@ int main(void)
       }
         
       
-       chaves = PortJ_Input();
-       switch (chaves)
-       {
-           case 0x3: /*11*/
+     
+      if (LedState != LedStateAnt){
+        LedStateAnt = LedState; // atualiza estado dos leds 
+                                //- evita reentada do código se nada a fazer
+        switch(LedState)
+        {
+           case P0d0: /*0000*/
                PortN_Output(0x0);
+               PortF_Output(0x00);
                break;
-           case 0x2: /*10*/
-               PortN_Output(0x1);
-               Uart0_Send('1');
-               break;
-           case 0x1: /*01*/
+           case Argumento1: /*1000*/
                PortN_Output(0x2);
-               Uart0_Send('2');
+               PortF_Output(0x00);
+                break;
+           case Operacao: /*0100*/
+               PortN_Output(0x1);
+               PortF_Output(0x00);
+                break;
+           case Argumento2: /*0010*/
+               PortN_Output(0x0);
+              PortF_Output(0x10);
+                break;            
+           case ResultadoValido: /*xxx1*/
+             switch(operacao)
+             {
+             case soma: /*0011*/
+               PortN_Output(0x0);
+               PortF_Output(0x11);
                break;
-           case 0x0: /*00*/
-               PortN_Output(0x3);
-               Uart0_Send('3');
-               break;            
-       }
+             case subtracao: /*0101*/
+               PortN_Output(0x1);
+               PortF_Output(0x01);
+               break;
+             case multiplicacao: /*0111*/
+               PortN_Output(0x1);
+               PortF_Output(0x11);
+               break;
+             case divisao: /*1001*/
+               PortN_Output(0x2);
+               PortF_Output(0x01);
+               break;
+             }
+             break;
+           case Erro: /*1110*/
+              PortN_Output(0x3);
+              PortF_Output(0x10);
+                break;            
+
+        }
+        
+        
+        
+      }
     }
 }
 

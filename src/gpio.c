@@ -2,6 +2,8 @@
 // Desenvolvido para a placa EK-TM4C1294XL
 // Inicializa as portas J e N
 // Prof. Guilherme Peron / Prof. Rafael de Góes
+// 
+// modificado por Giovani Zanelatto para incluir porta F para leds adicionais
 
 
 #include <stdint.h>
@@ -9,9 +11,14 @@
 
 #define GPIO_PORTJ (0x0100) //bit 8
 #define GPIO_PORTN (0x1000) //bit 12
+// acrescenta porta F
+#define GPIO_PORTF (0x0020) // bit 5
+
 #define GPIO_PORTN_LEDS   (*((volatile uint32_t *)0x4006403C))
 #define GPIO_PORTJ_BOTOES (*((volatile uint32_t *)0x4006003C))
 
+// mascara bits para acesso apenas aos bits 4 e 0
+#define GPIO_PORTF_LEDS  (*((volatile uint32_t *)0x4005D044)) 
 
 // -------------------------------------------------------------------------------
 // Função GPIO_Init
@@ -21,31 +28,38 @@
 void GPIO_Init(void)
 {
 	//1a. Ativar o clock para a porta setando o bit correspondente no registrador RCGCGPIO
-	SYSCTL_RCGCGPIO_R |= GPIO_PORTJ | GPIO_PORTN;
+	SYSCTL_RCGCGPIO_R |= GPIO_PORTJ | GPIO_PORTN | GPIO_PORTF;
 	//1b.   após isso verificar no PRGPIO se a porta está pronta para uso.
-        while((SYSCTL_PRGPIO_R & (GPIO_PORTJ | GPIO_PORTN) ) != (GPIO_PORTJ | GPIO_PORTN) ){};
+        while((SYSCTL_PRGPIO_R & (GPIO_PORTJ | GPIO_PORTN | GPIO_PORTF) ) != (GPIO_PORTJ | GPIO_PORTN | GPIO_PORTF) ){};
 	
 	// 2. Destravar a porta somente se for o pino PD7 e PE7
 		
 	// 3. Limpar o AMSEL para desabilitar a analógica
 	GPIO_PORTJ_AHB_AMSEL_R = 0x00;
 	GPIO_PORTN_AMSEL_R = 0x00;
+     	GPIO_PORTF_AHB_AMSEL_R = 0x00;  // acrescenta PortF
+
 		
 	// 4. Limpar PCTL para selecionar o GPIO
 	GPIO_PORTJ_AHB_PCTL_R = 0x00;
 	GPIO_PORTN_PCTL_R = 0x00;
+	GPIO_PORTF_AHB_PCTL_R = 0x00;
 
 	// 5. DIR para 0 se for entrada, 1 se for saída
 	GPIO_PORTJ_AHB_DIR_R = 0x00;
 	GPIO_PORTN_DIR_R = 0x03; //BIT0 | BIT1
+	GPIO_PORTF_AHB_DIR_R = 0x11; // bit 0 e bit 4
 		
 	// 6. Limpar os bits AFSEL para 0 para selecionar GPIO sem função alternativa	
 	GPIO_PORTJ_AHB_AFSEL_R = 0x00;
 	GPIO_PORTN_AFSEL_R = 0x00; 
+	GPIO_PORTF_AHB_AFSEL_R = 0x00;
+        
 		
 	// 7. Setar os bits de DEN para habilitar I/O digital	
 	GPIO_PORTJ_AHB_DEN_R = 0x03;   //Bit0 e bit1
 	GPIO_PORTN_DEN_R = 0x03;       //Bit0 e bit1
+        GPIO_PORTF_AHB_DEN_R = 0x11;   //Bit0 e bit4
 	
 	// 8. Habilitar resistor de pull-up interno, setar PUR para 1
 	GPIO_PORTJ_AHB_PUR_R = 0x03;   //Bit0 e bit1	
@@ -71,6 +85,18 @@ void PortN_Output(uint32_t valor)
 {
 	//Ponteiro para o valor dos bits com leitura amigável
 	GPIO_PORTN_LEDS = valor;
+}
+
+
+// -------------------------------------------------------------------------------
+// Função PortF_Output
+// Escreve os valores no port F
+// Parâmetro de entrada: Valor a ser escrito
+// Parâmetro de saída: não tem
+void PortF_Output(uint32_t valor)
+{
+	//Ponteiro para o valor dos bits com leitura amigável
+	GPIO_PORTF_LEDS = valor;
 }
 
 

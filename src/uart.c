@@ -2,7 +2,8 @@
 // Desenvolvido para a placa EK-TM4C1294XL
 // Inicializa a porta serial UART0
 // Prof. Guilherme Peron
-
+//
+// modificado por Giovani para corrigir baud rate e paridade impar
 #include <stdint.h>
 
 #include "tm4c1294ncpdt.h"
@@ -27,8 +28,8 @@ void Uart0_Init(void)
     // Para um clock de 16 MHz e um baud de 9600 bps (clockdiv=16)
     UART0_IBRD_R = 104;  //Parte inteira
     UART0_FBRD_R = 11;  //Parte fracionária    
-    // 4. Configurar 8 bits, sem FIFO, sem paridade e 1 stop-bit
-    UART0_LCRH_R = 0x0060;
+    // 4. Configurar 8 bits, sem FIFO,  paridade impar e 1 stop-bit
+    UART0_LCRH_R = 0x0062;
     // 5. Garantir que a fonte de clock seja o clock do sistema
     UART0_CC_R = 0x0000;
     // 6. Habilitar o RXE, TXE e UART
